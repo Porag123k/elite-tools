@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium online tools: HD Image Compressor, Scientific Calculator, Age Calculator, Currency Converter, AI Translator, and SMS Sender">
+    <meta name="keywords" content="premium tools, HD image compression, scientific calculator, age calculator, currency converter, AI translator, free SMS">
+    <meta name="author" content="EliteTools Pro">
+    <title>EliteTools PRO | Premium Online Tools</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --darker-color: #1a1e21;
+            --success-color: #4bb543;
+            --warning-color: #f0ad4e;
+            --danger-color: #d9534f;
+            --gradient-primary: linear-gradient(135deg, #4361ee, #3a0ca3);
+            --gradient-accent: linear-gradient(135deg, #4895ef, #4cc9f0);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.05);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f7fa;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Premium Header */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow-md);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 32px;
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        nav ul li a i {
+            font-size: 18px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background: var(--gradient-primary);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: white;
+            color: var(--primary-color);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background-color: white;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* Tools Grid */
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 60px 0;
+        }
+        
+        /* Premium Tool Card */
+        .tool-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .tool-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+        
+        .tool-header {
+            padding: 20px;
+            background-color: white;
+            color: var(--dark-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .tool-header i {
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .tool-body {
+            padding: 25px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--darker-color);
+            font-size: 15px;
+        }
+        
+        input, select, textarea, button {
+            width: 100%;
+            padding: 12px 18px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(72, 149, 239, 0.2);
+        }
+        
+        button {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button i {
+            font-size: 18px;
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        /* Ad Containers */
+        .ad-spacer {
+            margin: 60px 0;
+            padding: 0;
+            width: 100%;
+        }
+        
+        .ad-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            margin: 0 auto;
+            max-width: 100%;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .horizontal-ad {
+            width: 100%;
+            height: auto;
+            min-height: 90px;
+        }
+        
+        .vertical-ad {
+            width: 100%;
+            height: auto;
+            min-height: 250px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--darker-color);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 15px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            opacity: 0.7;
+            font-size: 14px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .tools-container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: row;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            nav ul.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .ad-spacer {
+                margin: 40px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tools-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tool-card {
+                border-radius: 10px;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-pop {
+            animation: pop 0.3s ease-out;
+        }
+        
+        @keyframes pop {
+            0% { transform: scale(0.95); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Tool Specific Styles */
+        /* Image Compressor */
+        #compressedImageContainer {
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        #compressedImage {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+        }
+        
+        .file-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            background: rgba(67, 97, 238, 0.05);
+            padding: 12px;
+            border-radius: 8px;
+        }
+        
+        .file-info p {
+            font-size: 14px;
+            color: var(--darker-color);
+        }
+        
+        .file-info p span {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--gradient-primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        /* Calculator */
+        .calculator-display {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: right;
+            font-size: 28px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            min-height: 80px;
+            font-family: 'Poppins', sans-serif;
+            border: 1px solid #eee;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        #calcHistory {
+            font-size: 14px;
+            color: #666;
+            min-height: 18px;
+        }
+        
+        #calcDisplay {
+            word-break: break-all;
+        }
+        
+        .calculator-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .calculator-buttons button {
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 8px;
+            background: white;
+            color: var(--dark-color);
+            border: 1px solid #eee;
+            font-weight: 500;
+        }
+        
+        .calculator-buttons button:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .calculator-buttons button.operator {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .calculator-buttons button.equals {
+            background: var(--gradient-primary);
+            color: white;
+        }
+        
+        /* Age Calculator */
+        .age-result {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+        
+        .age-box {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+        }
+        
+        .age-box h4 {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .age-box p {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* Currency Converter */
+        .currency-result {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .currency-rate {
+            font-size: 14px;
+            color: #666;
+            padding-top: 10px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        /* Translator */
+        .language-selectors {
+            display: grid;
+            grid-template-columns: 1fr 40px 1fr;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .swap-languages {
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .swap-languages:hover {
+            transform: rotate(180deg) scale(1.1);
+        }
+        
+        /* SMS Sender */
+        .char-count {
+            text-align: right;
+            font-size: 13px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .char-count.warning {
+            color: var(--warning-color);
+        }
+        
+        .char-count.error {
+            color: var(--danger-color);
+        }
+        
+        .sms-history-item {
+            padding: 15px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee;
+        }
+        
+        .sms-history-item p {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .sms-history-item .sms-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #666;
+            font-size: 13px;
+        }
+        
+        /* Loading Spinner */
+        .spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-tools"></i>
+                <span>EliteTools PRO</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#image-compressor"><i class="fas fa-image"></i> Image Compressor</a></li>
+                    <li><a href="#calculator"><i class="fas fa-calculator"></i> Calculator</a></li>
+                    <li><a href="#age-calculator"><i class="fas fa-birthday-cake"></i> Age Calculator</a></li>
+                    <li><a href="#currency-converter"><i class="fas fa-exchange-alt"></i> Currency</a></li>
+                    <li><a href="#translator"><i class="fas fa-language"></i> Translator</a></li>
+                    <li><a href="#sms-sender"><i class="fas fa-sms"></i> SMS Sender</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInDown">Premium Online Tools</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s">Professional-grade tools for all your needs. Fast, reliable, and beautifully designed.</p>
+            <div class="cta-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                <a href="#image-compressor" class="btn btn-primary">Start Using Tools</a>
+                <a href="#features" class="btn btn-outline">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <!-- Top Leaderboard Ad -->
+        <div class="ad-spacer">
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Top Banner -->
+                <ins class="adsbygoogle horizontal-ad"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_LEADERBOARD_SLOT"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        
+        <!-- First Row of Tools -->
+        <div class="tools-container">
+            <!-- HD Image Compressor Tool -->
+            <div class="tool-card animate__animated animate__fadeIn" id="image-compressor">
+                <div class="tool-header">
+                    <i class="fas fa-compress-alt"></i>
+                    <h2>HD Image Compressor</h2>
+                </div>
+                <div class="tool-body">
+                    <div class="form-group">
+                        <label for="imageUpload"><i class="fas fa-cloud-upload-alt"></i> Upload Image</label>
+                        <input type="file" id="imageUpload" accept="image/*" class="file-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="compressionLevel"><i class="fas fa-sliders-h"></i> Compression Level</label>
+                        <select id="compressionLevel">
+                            <option value="0.9">Ultra HD (90%)</option>
+                            <option value="0.7" selected>High Quality (70%)</option>
+                            <option value="0.5">Medium Quality (50%)</option>
+                            <option value="0.3">Small Size (30%)</option>
+                        </select>
+                    </div>
+                    <button id="compressBtn">
+                        <i class="fas fa-compress-arrows-alt"></i> Compress Image
+                    </button>
+                    <div id="compressedImageContainer" style="display:none;">
+                        <h3>Compressed Result</h3>
+                        <img id="compressedImage" src="#" alt="Compressed Image">
+                        <div class="file-info">
+                            <p>Original: <span id="originalSize">0</span> KB</p>
+                            <p>Compressed: <span id="compressedSize">0</span> KB</p>
+                            <p>Reduction: <span id="reductionPercent">0</span>%</p>
+                        </div>
+                        <a id="downloadBtn" class="download-btn" href="#" download="compressed_image.jpg">
+                            <i class="fas fa-download"></i> Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scientific Calculator Tool -->
+            <div class="tool-card animate__animated animate__fadeIn" id="calculator">
+                <div class="tool-header">
+                    <i class="fas fa-calculator"></i>
+                    <h2>Scientific Calculator</h2>
+                </div>
+                <div class="tool-body">
+                    <div class="calculator-display">
+                        <div id="calcHistory"></div>
+                        <div id="calcDisplay">0</div>
+                    </div>
+                    <div class="calculator-buttons">
+                        <button onclick="calcClear()">C</button>
+                        <button onclick="calcBackspace()">⌫</button>
+                        <button onclick="calcPercentage()">%</button>
+                        <button onclick="calcOperation('/')" class="operator">/</button>
+                        <button onclick="calcInput('7')">7</button>
+                        <button onclick="calcInput('8')">8</button>
+                        <button onclick="calcInput('9')">9</button>
+                        <button onclick="calcOperation('*')" class="operator">×</button>
+                        <button onclick="calcInput('4')">4</button>
+                        <button onclick="calcInput('5')">5</button>
+                        <button onclick="calcInput('6')">6</button>
+                        <button onclick="calcOperation('-')" class="operator">-</button>
+                        <button onclick="calcInput('1')">1</button>
+                        <button onclick="calcInput('2')">2</button>
+                        <button onclick="calcInput('3')">3</button>
+                        <button onclick="calcOperation('+')" class="operator">+</button>
+                        <button onclick="calcInput('0')">0</button>
+                        <button onclick="calcDecimal()">.</button>
+                        <button onclick="calcSqrt()">√</button>
+                        <button onclick="calcEquals()" class="equals">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Middle Rectangle Ad -->
+        <div class="ad-spacer">
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Middle Rectangle -->
+                <ins class="adsbygoogle horizontal-ad"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_RECTANGLE_SLOT"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        
+        <!-- Second Row of Tools -->
+        <div class="tools-container">
+            <!-- Age Calculator Tool -->
+            <div class="tool-card animate__animated animate__fadeIn" id="age-calculator">
+                <div class="tool-header">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h2>Age Calculator</h2>
+                </div>
+                <div class="tool-body">
+                    <div class="form-group">
+                        <label for="birthDate"><i class="far fa-calendar-alt"></i> Date of Birth</label>
+                        <input type="date" id="birthDate">
+                    </div>
+                    <button onclick="calculateAge()">
+                        <i class="fas fa-calculator"></i> Calculate Age
+                    </button>
+                    <div class="result" id="ageResult">
+                        <h3>Your Age</h3>
+                        <div class="age-result">
+                            <div class="age-box">
+                                <h4>Years</h4>
+                                <p id="ageYears">0</p>
+                            </div>
+                            <div class="age-box">
+                                <h4>Months</h4>
+                                <p id="ageMonths">0</p>
+                            </div>
+                            <div class="age-box">
+                                <h4>Days</h4>
+                                <p id="ageDays">0</p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px; text-align: center;">
+                            <small id="totalDays"></small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Currency Converter Tool -->
+            <div class="tool-card animate__animated animate__fadeIn" id="currency-converter">
+                <div class="tool-header">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h2>Currency Converter</h2>
+                </div>
+                <div class="tool-body">
+                    <div class="form-group">
+                        <label for="amount"><i class="fas fa-money-bill-wave"></i> Amount</label>
+                        <input type="number" id="amount" placeholder="Enter amount" value="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="fromCurrency"><i class="fas fa-arrow-up"></i> From</label>
+                        <select id="fromCurrency">
+                            <option value="USD">US Dollar (USD)</option>
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                            <option value="JPY">Japanese Yen (JPY)</option>
+                            <option value="CAD">Canadian Dollar (CAD)</option>
+                            <option value="AUD">Australian Dollar (AUD)</option>
+                            <option value="CNY">Chinese Yuan (CNY)</option>
+                            <option value="INR">Indian Rupee (INR)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="toCurrency"><i class="fas fa-arrow-down"></i> To</label>
+                        <select id="toCurrency">
+                            <option value="EUR">Euro (EUR)</option>
+                            <option value="USD" selected>US Dollar (USD)</option>
+                            <option value="GBP">British Pound (GBP)</option>
+                            <option value="JPY">Japanese Yen (JPY)</option>
+                            <option value="CAD">Canadian Dollar (CAD)</option>
+                            <option value="AUD">Australian Dollar (AUD)</option>
+                            <option value="CNY">Chinese Yuan (CNY)</option>
+                            <option value="INR">Indian Rupee (INR)</option>
+                        </select>
+                    </div>
+                    <button onclick="convertCurrency()">
+                        <i class="fas fa-exchange-alt"></i> Convert
+                    </button>
+                    <div class="result" id="currencyResult">
+                        <h3>Converted Amount</h3>
+                        <p id="convertedAmount" style="font-size: 24px; font-weight: 600; color: var(--primary-color);"></p>
+                        <p class="currency-rate" id="exchangeRate"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vertical Sidebar Ad (shown on desktop) -->
+        <div class="ad-spacer">
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Vertical Banner -->
+                <ins class="adsbygoogle vertical-ad"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_VERTICAL_SLOT"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+        
+        <!-- Third Row of Tools -->
+        <div class="tools-container">
+            <!-- AI Translator Tool -->
+            <div class="tool-card animate__animated animate__fadeIn" id="translator">
+                <div class="tool-header">
+                    <i class="fas fa-language"></i>
+                    <h2>AI Translator</h2>
+                </div>
+                <div class="tool-body">
+                    <div class="form-group">
+                        <label for="sourceText"><i class="fas fa-font"></i> Text to Translate</label>
+                        <textarea id="sourceText" rows="3" placeholder="Enter text to translate"></textarea>
+                    </div>
+                    <div class="language-selectors">
+                        <select id="sourceLanguage">
+                            <option value="en">English</option>
+                            <option value="es">Spanish</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="it">Italian</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="ru">Russian</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ar">Arabic</option>
+                            <option value="hi">Hindi</option>
+                        </select>
+                        <button class="swap-languages" onclick="swapLanguages()">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+                        <select id="targetLanguage">
+                            <option value="es">Spanish</option>
+                            <option value="en" selected>English</option>
+                            <option value="fr">French</option>
+                            <option value="de">German</option>
+                            <option value="it">Italian</option>
+                            <option value="pt">Portuguese</option>
+                            <option value="ru">Russian</option>
+                            <option value="zh">Chinese</option>
+                            <option value="ja">Japanese</option>
+                            <option value="ar">Arabic</option>
+                            <option value="hi">Hindi</option>
+                        </select>
+                    </div>
+                    <button onclick="translateText()">
+                        <i class="fas fa-language"></i> Translate
+                    </button>
+                    <div class="result" id="translationResult">
+                        <h3>Translation</h3>
+                        <p id="translatedText" style="font-size: 16px; line-height: 1.6;"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium SMS Sender Tool -->
+            <div class="tool-card animate__animated animate__fadeIn" id="sms-sender">
+                <div class="tool-header">
+                    <i class="fas fa-sms"></i>
+                    <h2>Premium SMS Sender</h2>
+                </div>
+                <div class="tool-body">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="openTab(event, 'smsTab1')">
+                            <i class="fas fa-paper-plane"></i> Send SMS
+                        </button>
+                        <button class="tab-btn" onclick="openTab(event, 'smsTab2')">
+                            <i class="fas fa-history"></i> History
+                        </button>
+                    </div>
+                    
+                    <div id="smsTab1" class="tab-content active">
+                        <div class="form-group">
+                            <label for="phoneNumber"><i class="fas fa-phone"></i> Phone Number</label>
+                            <input type="text" id="phoneNumber" placeholder="e.g., +1234567890">
+                        </div>
+                        <div class="form-group">
+                            <label for="smsMessage"><i class="fas fa-comment-alt"></i> Message</label>
+                            <textarea id="smsMessage" rows="3" placeholder="Enter your message (max 160 characters)"></textarea>
+                            <p id="charCount" class="char-count">0/160 characters</p>
+                        </div>
+                        <button onclick="sendSMS()">
+                            <i class="fas fa-paper-plane"></i> Send SMS
+                        </button>
+                        <div class="result" id="smsResult">
+                            <p id="smsStatus"></p>
+                        </div>
+                    </div>
+                    
+                    <div id="smsTab2" class="tab-content">
+                        <h3><i class="fas fa-history"></i> Sent Messages</h3>
+                        <div id="smsHistory">
+                            <p>No messages sent yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Leaderboard Ad -->
+        <div class="ad-spacer">
+            <div class="ad-container">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
+                <!-- Bottom Banner -->
+                <ins class="adsbygoogle horizontal-ad"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_BOTTOM_SLOT"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Premium Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EliteTools PRO</h3>
+                    <p>Premium online tools for professionals and businesses. Fast, reliable, and beautifully designed.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Tools</h3>
+                    <ul class="footer-links">
+                        <li><a href="#image-compressor">Image Compressor</a></li>
+                        <li><a href="#calculator">Calculator</a></li>
+                        <li><a href="#age-calculator">Age Calculator</a></li>
+                        <li><a href="#currency-converter">Currency Converter</a></li>
+                        <li><a href="#translator">Language Translator</a></li>
+                        <li><a href="#sms-sender">SMS Sender</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 EliteTools PRO. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+            this.innerHTML = this.innerHTML.includes('times') ? 
+                '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    document.getElementById('navMenu').classList.remove('active');
+                    document.getElementById('mobileMenuBtn').innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+        
+        // Tab functionality
+        function openTab(evt, tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            
+            tabContents.forEach(tab => tab.classList.remove('active'));
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            
+            document.getElementById(tabName).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+        
+        // Image Compression Tool
+        document.getElementById('compressBtn').addEventListener('click', function() {
+            const fileInput = document.getElementById('imageUpload');
+            const compressionLevel = parseFloat(document.getElementById('compressionLevel').value);
+            
+            if (fileInput.files.length === 0) {
+                alert('Please select an image file first.');
+                return;
+            }
+            
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+            
+            // Show loading state
+            const originalBtnText = this.innerHTML;
+            this.innerHTML = '<span class="spinner"></span> Compressing...';
+            this.disabled = true;
+            
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Calculate new dimensions
+                    const maxWidth = 2000;
+                    const maxHeight = 2000;
+                    let width = img.width;
+                    let height = img.height;
+                    
+                    if (width > maxWidth) {
+                        height *= maxWidth / width;
+                        width = maxWidth;
+                    }
+                    
+                    if (height > maxHeight) {
+                        width *= maxHeight / height;
+                        height = maxHeight;
+                    }
+                    
+                    canvas.width = width;
+                    canvas.height = height;
+                    
+                    // Draw image on canvas with compression
+                    ctx.drawImage(img, 0, 0, width, height);
+                    
+                    // Convert to compressed image
+                    const compressedDataUrl = canvas.toDataURL('image/jpeg', compressionLevel);
+                    
+                    // Display compressed image
+                    const compressedImg = document.getElementById('compressedImage');
+                    compressedImg.src = compressedDataUrl;
+                    
+                    // Calculate sizes
+                    const originalSize = file.size / 1024; // in KB
+                    const compressedSize = (compressedDataUrl.length * 0.75) / 1024; // Approximate KB
+                    const reduction = ((originalSize - compressedSize) / originalSize * 100).toFixed(2);
+                    
+                    // Display results
+                    document.getElementById('originalSize').textContent = originalSize.toFixed(2);
+                    document.getElementById('compressedSize').textContent = compressedSize.toFixed(2);
+                    document.getElementById('reductionPercent').textContent = reduction;
+                    
+                    // Set download link
+                    const downloadBtn = document.getElementById('downloadBtn');
+                    downloadBtn.href = compressedDataUrl;
+                    downloadBtn.download = 'compressed_' + file.name.replace(/\.[^/.]+$/, "") + '.jpg';
+                    
+                    // Show results with animation
+                    document.getElementById('compressedImageContainer').style.display = 'block';
+                    document.getElementById('compressedImageContainer').classList.add('animate-pop');
+                    
+                    // Reset button
+                    document.getElementById('compressBtn').innerHTML = originalBtnText;
+                    document.getElementById('compressBtn').disabled = false;
+                };
+                
+                img.onerror = function() {
+                    alert('Error loading image. Please try another file.');
+                    document.getElementById('compressBtn').innerHTML = originalBtnText;
+                    document.getElementById('compressBtn').disabled = false;
+                };
+                
+                img.src = e.target.result;
+            };
+            
+            reader.readAsDataURL(file);
+        });
+        
+        // Calculator Tool
+        let currentInput = '0';
+        let previousInput = '';
+        let operation = null;
+        let resetInput = false;
+        
+        function updateDisplay() {
+            document.getElementById('calcDisplay').textContent = currentInput;
+            document.getElementById('calcHistory').textContent = previousInput + (operation ? ' ' + operation : '');
+        }
+        
+        function calcInput(number) {
+            if (currentInput === '0' || resetInput) {
+                currentInput = number;
+                resetInput = false;
+            } else {
+                currentInput += number;
+            }
+            updateDisplay();
+        }
+        
+        function calcDecimal() {
+            if (resetInput) {
+                currentInput = '0.';
+                resetInput = false;
+            } else if (!currentInput.includes('.')) {
+                currentInput += '.';
+            }
+            updateDisplay();
+        }
+        
+        function calcClear() {
+            currentInput = '0';
+            previousInput = '';
+            operation = null;
+            updateDisplay();
+        }
+        
+        function calcBackspace() {
+            if (currentInput.length === 1 || (currentInput.length === 2 && currentInput.startsWith('-'))) {
+                currentInput = '0';
+            } else {
+                currentInput = currentInput.slice(0, -1);
+            }
+            updateDisplay();
+        }
+        
+        function calcPercentage() {
+            currentInput = (parseFloat(currentInput) / 100).toString();
+            updateDisplay();
+        }
+        
+        function calcSqrt() {
+            currentInput = Math.sqrt(parseFloat(currentInput)).toString();
+            updateDisplay();
+        }
+        
+        function calcOperation(op) {
+            if (operation !== null) calcEquals();
+            previousInput = currentInput;
+            operation = op;
+            resetInput = true;
+            updateDisplay();
+        }
+        
+        function calcEquals() {
+            if (operation === null) return;
+            
+            let result;
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+            
+            switch (operation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+            
+            currentInput = result.toString();
+            operation = null;
+            previousInput = '';
+            resetInput = true;
+            updateDisplay();
+        }
+        
+        // Age Calculator Tool
+        function calculateAge() {
+            const birthDate = new Date(document.getElementById('birthDate').value);
+            if (!birthDate.getTime()) {
+                alert('Please select a valid date');
+                return;
+            }
+            
+            const today = new Date();
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDiff = today.getMonth() - birthDate.getMonth();
+            
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            
+            // Calculate months and days
+            let months, days;
+            if (today.getMonth() >= birthDate.getMonth()) {
+                months = today.getMonth() - birthDate.getMonth();
+            } else {
+                months = 12 + today.getMonth() - birthDate.getMonth();
+            }
+            
+            if (today.getDate() >= birthDate.getDate()) {
+                days = today.getDate() - birthDate.getDate();
+            } else {
+                const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, birthDate.getDate());
+                days = Math.floor((today - lastMonth) / (1000 * 60 * 60 * 24));
+                months--;
+            }
+            
+            // Update display
+            document.getElementById('ageYears').textContent = age;
+            document.getElementById('ageMonths').textContent = months;
+            document.getElementById('ageDays').textContent = days;
+            document.getElementById('totalDays').textContent = `Total days: ${Math.floor((today - birthDate) / (1000 * 60 * 60 * 24)).toLocaleString()}`;
+            
+            // Show result with animation
+            const resultDiv = document.getElementById('ageResult');
+            resultDiv.style.display = 'block';
+            resultDiv.classList.add('animate-pop');
+        }
+        
+        // Currency Converter Tool
+        async function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const fromCurrency = document.getElementById('fromCurrency').value;
+            const toCurrency = document.getElementById('toCurrency').value;
+            
+            if (isNaN(amount) || amount <= 0) {
+                alert('Please enter a valid amount');
+                return;
+            }
+            
+            // Show loading state
+            const originalBtnText = document.querySelector('#currency-converter button').innerHTML;
+            document.querySelector('#currency-converter button').innerHTML = '<span class="spinner"></span> Converting...';
+            document.querySelector('#currency-converter button').disabled = true;
+            
+            document.getElementById('convertedAmount').textContent = 'Converting...';
+            document.getElementById('currencyResult').style.display = 'block';
+            
+            // Simulate API delay
+            setTimeout(() => {
+                // Mock exchange rates (in production, use a real API)
+                const exchangeRates = {
+                    USD: { EUR: 0.85, GBP: 0.73, JPY: 110.15, CAD: 1.25, AUD: 1.30, CNY: 6.45, INR: 74.50 },
+                    EUR: { USD: 1.18, GBP: 0.86, JPY: 129.50, CAD: 1.47, AUD: 1.53, CNY: 7.59, INR: 87.65 },
+                    GBP: { USD: 1.37, EUR: 1.16, JPY: 150.75, CAD: 1.71, AUD: 1.78, CNY: 8.82, INR: 101.90 },
+                    JPY: { USD: 0.0091, EUR: 0.0077, GBP: 0.0066, CAD: 0.011, AUD: 0.012, CNY: 0.059, INR: 0.68 },
+                    CAD: { USD: 0.80, EUR: 0.68, GBP: 0.58, JPY: 90.25, AUD: 1.04, CNY: 5.16, INR: 59.60 },
+                    AUD: { USD: 0.77, EUR: 0.65, GBP: 0.56, JPY: 83.25, CAD: 0.96, CNY: 4.96, INR: 57.30 },
+                    CNY: { USD: 0.16, EUR: 0.13, GBP: 0.11, JPY: 16.95, CAD: 0.19, AUD: 0.20, INR: 11.55 },
+                    INR: { USD: 0.013, EUR: 0.011, GBP: 0.0098, JPY: 1.47, CAD: 0.017, AUD: 0.017, CNY: 0.087 }
+                };
+                
+                let rate;
+                if (fromCurrency === toCurrency) {
+                    rate = 1;
+                } else if (exchangeRates[fromCurrency] && exchangeRates[fromCurrency][toCurrency]) {
+                    rate = exchangeRates[fromCurrency][toCurrency];
+                } else {
+                    // If direct rate not available, convert via USD
+                    const toUSD = exchangeRates[fromCurrency] ? exchangeRates[fromCurrency]['USD'] : 1;
+                    const fromUSD = exchangeRates['USD'] ? exchangeRates['USD'][toCurrency] : 1;
+                    rate = toUSD * fromUSD;
+                }
+                
+                const convertedAmount = (amount * rate).toFixed(2);
+                document.getElementById('convertedAmount').textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
+                document.getElementById('exchangeRate').textContent = `1 ${fromCurrency} = ${rate.toFixed(6)} ${toCurrency}`;
+                
+                // Reset button
+                document.querySelector('#currency-converter button').innerHTML = originalBtnText;
+                document.querySelector('#currency-converter button').disabled = false;
+                
+                // Add animation
+                document.getElementById('currencyResult').classList.add('animate-pop');
+            }, 1000);
+        }
+        
+        // Language Translator Tool
+        function swapLanguages() {
+            const sourceLang = document.getElementById('sourceLanguage');
+            const targetLang = document.getElementById('targetLanguage');
+            const temp = sourceLang.value;
+            sourceLang.value = targetLang.value;
+            targetLang.value = temp;
+            
+            // Add animation
+            document.querySelector('.swap-languages').classList.add('animate-pop');
+            setTimeout(() => {
+                document.querySelector('.swap-languages').classList.remove('animate-pop');
+            }, 300);
+        }
+        
+        function translateText() {
+            const sourceText = document.getElementById('sourceText').value;
+            const sourceLang = document.getElementById('sourceLanguage').value;
+            const targetLang = document.getElementById('targetLanguage').value;
+            
+            if (!sourceText.trim()) {
+                alert('Please enter text to translate');
+                return;
+            }
+            
+            // Show loading state
+            const originalBtnText = document.querySelector('#translator button').innerHTML;
+            document.querySelector('#translator button').innerHTML = '<span class="spinner"></span> Translating...';
+            document.querySelector('#translator button').disabled = true;
+            
+            document.getElementById('translatedText').textContent = 'Translating...';
+            document.getElementById('translationResult').style.display = 'block';
+            
+            // Simulate API delay
+            setTimeout(() => {
+                // Mock translations (in production, use a real API)
+                const translations = {
+                    'en-es': {
+                        'hello': 'hola',
+                        'goodbye': 'adiós',
+                        'thank you': 'gracias',
+                        'how are you': 'cómo estás',
+                        'please': 'por favor'
+                    },
+                    'es-en': {
+                        'hola': 'hello',
+                        'adiós': 'goodbye',
+                        'gracias': 'thank you',
+                        'cómo estás': 'how are you',
+                        'por favor': 'please'
+                    },
+                    'en-fr': {
+                        'hello': 'bonjour',
+                        'goodbye': 'au revoir',
+                        'thank you': 'merci',
+                        'how are you': 'comment ça va',
+                        'please': 's\'il vous plaît'
+                    },
+                    'fr-en': {
+                        'bonjour': 'hello',
+                        'au revoir': 'goodbye',
+                        'merci': 'thank you',
+                        'comment ça va': 'how are you',
+                        's\'il vous plaît': 'please'
+                    }
+                };
+                
+                const translationKey = `${sourceLang}-${targetLang}`;
+                let translatedText = '';
+                
+                if (translations[translationKey]) {
+                    // Try to find exact matches
+                    const lowerSource = sourceText.toLowerCase();
+                    if (translations[translationKey][lowerSource]) {
+                        translatedText = translations[translationKey][lowerSource];
+                    } else {
+                        // No exact match found
+                        translatedText = `[Mock Translation] Text would be translated from ${sourceLang} to ${targetLang} here`;
+                    }
+                } else {
+                    // Language pair not in mock data
+                    translatedText = `[Mock Translation] Text would be translated from ${sourceLang} to ${targetLang} here`;
+                }
+                
+                document.getElementById('translatedText').textContent = translatedText;
+                
+                // Reset button
+                document.querySelector('#translator button').innerHTML = originalBtnText;
+                document.querySelector('#translator button').disabled = false;
+                
+                // Add animation
+                document.getElementById('translationResult').classList.add('animate-pop');
+            }, 1000);
+        }
+        
+        // SMS Sender Tool
+        const smsHistory = [];
+        
+        // Character count for SMS
+        document.getElementById('smsMessage').addEventListener('input', function() {
+            const count = this.value.length;
+            const charCount = document.getElementById('charCount');
+            charCount.textContent = `${count}/160 characters`;
+            
+            if (count > 140 && count <= 160) {
+                charCount.className = 'char-count warning';
+            } else if (count > 160) {
+                charCount.className = 'char-count error';
+            } else {
+                charCount.className = 'char-count';
+            }
+        });
+        
+        function sendSMS() {
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            const message = document.getElementById('smsMessage').value.trim();
+            
+            if (!phoneNumber) {
+                alert('Please enter a phone number');
+                return;
+            }
+            
+            if (!message) {
+                alert('Please enter a message');
+                return;
+            }
+            
+            if (message.length > 160) {
+                alert('Message must be 160 characters or less');
+                return;
+            }
+            
+            // Show loading state
+            const originalBtnText = document.querySelector('#smsTab1 button').innerHTML;
+            document.querySelector('#smsTab1 button').innerHTML = '<span class="spinner"></span> Sending...';
+            document.querySelector('#smsTab1 button').disabled = true;
+            
+            document.getElementById('smsStatus').textContent = 'Sending...';
+            document.getElementById('smsResult').style.display = 'block';
+            
+            // Simulate API delay
+            setTimeout(() => {
+                // Add to history
+                const timestamp = new Date().toLocaleString();
+                smsHistory.unshift({ 
+                    phoneNumber, 
+                    message, 
+                    timestamp, 
+                    status: Math.random() > 0.1 ? 'Delivered' : 'Failed'
+                });
+                updateSMSHistory();
+                
+                // Show success message
+                const statusDiv = document.getElementById('smsStatus');
+                if (smsHistory[0].status === 'Delivered') {
+                    statusDiv.innerHTML = `
+                        <span style="color: var(--success-color);">
+                            <i class="fas fa-check-circle"></i> SMS sent successfully to ${phoneNumber}
+                        </span>
+                    `;
+                } else {
+                    statusDiv.innerHTML = `
+                        <span style="color: var(--danger-color);">
+                            <i class="fas fa-times-circle"></i> SMS failed to send to ${phoneNumber}
+                        </span>
+                    `;
+                }
+                
+                // Clear form
+                document.getElementById('phoneNumber').value = '';
+                document.getElementById('smsMessage').value = '';
+                document.getElementById('charCount').textContent = '0/160 characters';
+                document.getElementById('charCount').className = 'char-count';
+                
+                // Reset button
+                document.querySelector('#smsTab1 button').innerHTML = originalBtnText;
+                document.querySelector('#smsTab1 button').disabled = false;
+                
+                // Add animation
+                document.getElementById('smsResult').classList.add('animate-pop');
+            }, 1500);
+        }
+        
+        function updateSMSHistory() {
+            const historyContainer = document.getElementById('smsHistory');
+            
+            if (smsHistory.length === 0) {
+                historyContainer.innerHTML = '<p>No messages sent yet.</p>';
+                return;
+            }
+            
+            let html = '<div style="max-height: 300px; overflow-y: auto;">';
+            smsHistory.forEach((sms, index) => {
+                html += `
+                    <div class="sms-history-item">
+                        <p><strong>To:</strong> ${sms.phoneNumber}</p>
+                        <p><strong>Message:</strong> ${sms.message}</p>
+                        <div class="sms-meta">
+                            <span><i class="far fa-clock"></i> ${sms.timestamp}</span>
+                            <span style="color: ${sms.status === 'Delivered' ? 'var(--success-color)' : 'var(--danger-color)'}">
+                                <i class="fas fa-${sms.status === 'Delivered' ? 'check' : 'times'}"></i> ${sms.status}
+                            </span>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            
+            historyContainer.innerHTML = html;
+        }
+        
+        // Initialize with some sample SMS history
+        smsHistory.push({
+            phoneNumber: "+1234567890",
+            message: "Hello, this is a test message!",
+            timestamp: new Date().toLocaleString(),
+            status: "Delivered"
+        });
+        updateSMSHistory();
+        
+        // Add animation on scroll
+        const animateOnScroll = function() {
+            const toolCards = document.querySelectorAll('.tool-card');
+            const windowHeight = window.innerHeight;
+            
+            toolCards.forEach(card => {
+                const cardPosition = card.getBoundingClientRect().top;
+                const animationPoint = 150;
+                
+                if (cardPosition < windowHeight - animationPoint) {
+                    card.classList.add('animate__fadeIn');
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Run once on page load
+    </script>
+</body>
+</html>
